@@ -16,11 +16,23 @@ This project implements a RESTful API for predictive analysis of manufacturing o
 
 ## Dataset
 
-The API uses a manufacturing dataset [Machine Downtime.csv](https://github.com/sayan0506/Predictive-Analysis-for-Manufacturing-Operations/blob/main/Machine%20Downtime.csv) containing the following key columns along with some other feature columns, among which we are mentioning the following columns:
+The API uses a manufacturing dataset [Machine Downtime.csv](https://github.com/sayan0506/Predictive-Analysis-for-Manufacturing-Operations/blob/main/Machine%20Downtime.csv) Which doesn't contain the "Run_Time" feature column, thus we created a synthetic column, using the following code:
+
+    base_run_time = np.random.normal(400, 100) if row['Downtime'] == 'No' else np.random.normal(100, 5)
+    
+    # Adjust run time based on temperature
+    temp_adjustment = (100 - row['Temperature(C)']) * 0.5  # Higher temp -> lower run time
+    return max(base_run_time + temp_adjustment, 0)  # Ensure no negative run time
+
+
+After generating the ssynthetic data we obtain [Machine_Downtime_Synthetic.csv](https://github.com/sayan0506/Predictive-Analysis-for-Manufacturing-Operations/blob/main/Machine_Downtime_Synthetic.csv) containing the following key columns along with some other feature columns, among which we are mentioning the following columns which also mentioned in the assignment.
+
+Note: For our simplicity, we have taken "Bearing temperature" and made that column as "Temperature(C)" column, so the final csv contains some of follwoing columns:
+
 - **Machine_ID**: Unique identifier for the machine.
-- **Temperature**: Operating temperature of the machine.
-- **Run_Time**: The machine's runtime (in hours).
-- **Downtime_Flag**: Whether the machine experienced downtime (1 for Yes, 0 for No).
+- **Temperature**: Operating temperature of the machine(here bearing temperature).
+- **Run_Time**: Operations Run time
+- **Downtime**: Whether the machine experienced downtime (1 for Yes, 0 for No).
 
 If no dataset is available, synthetic data is generated for testing and development purposes.
 
