@@ -16,7 +16,7 @@ This project implements a RESTful API for predictive analysis of manufacturing o
 
 ## Dataset
 
-The API uses a manufacturing dataset [1] containing the following key columns along with some other feature columns, among which we are mentioning the following columns:
+The API uses a manufacturing dataset [Machine Downtime.csv](https://github.com/sayan0506/Predictive-Analysis-for-Manufacturing-Operations/blob/main/Machine%20Downtime.csv) containing the following key columns along with some other feature columns, among which we are mentioning the following columns:
 - **Machine_ID**: Unique identifier for the machine.
 - **Temperature**: Operating temperature of the machine.
 - **Run_Time**: The machine's runtime (in hours).
