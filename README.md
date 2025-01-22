@@ -109,8 +109,8 @@ If no dataset is available, synthetic data is generated for testing and developm
 - **Request**:
   ```json
   {
-    "Temperature": 85,
-    "Run_Time": 100
+    "Temperature": 80,
+    "Run_Time": 150
   }
   ```
   Example:
@@ -120,9 +120,10 @@ If no dataset is available, synthetic data is generated for testing and developm
 - **Response**:
   ```json
   {
-    "Downtime": "Yes",
-    "Confidence": 0.85
-  }
+    "Downtime": "NO",
+    "confidence": 0.6666666666666666,
+    "message": "Prediction done"
+    }
   ```
 
 ---
