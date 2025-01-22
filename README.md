@@ -164,10 +164,10 @@ If no dataset is available, synthetic data is generated for testing and developm
 ├── app.py                # Main Flask application
 ├── README.md             # Project documentation
 ├── requirements.txt      # Python dependencies
-├── data/Machine Downtime.csv                 # Sample dataset (if any)
-├── synthetic_data.py     # Script to generate synthetic data
+├── data
+|   ├── Machine Downtime.csv
+|   ├── Machine_Downtime_Synthetic.csv                     # Script to generate synthetic data
 ├── templates/index.html            # HTML templates (if applicable)
-└── static/               # Static files (CSS/JS, if applicable)
 ```
 
 ---
