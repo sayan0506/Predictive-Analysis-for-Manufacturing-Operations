@@ -62,7 +62,7 @@ If no dataset is available, synthetic data is generated for testing and developm
   ```
   Example:
   ```
-  curl -X POST -F "file=@data.csv" http://127.0.0.1:5000/upload
+  curl -X POST -F "file=@Machine_Downtime_Synthetic.csv" http://127.0.0.1:5000/upload
   ```
 - **Response**:
   ```json
