@@ -16,7 +16,7 @@ This project implements a RESTful API for predictive analysis of manufacturing o
 
 ## Dataset
 
-The API uses a manufacturing dataset containing the following key columns:
+The API uses a manufacturing dataset [1] containing the following key columns along with some other feature columns, among which we are mentioning the following columns:
 - **Machine_ID**: Unique identifier for the machine.
 - **Temperature**: Operating temperature of the machine.
 - **Run_Time**: The machine's runtime (in hours).
@@ -180,7 +180,7 @@ Machine_ID,Temperature,Run_Time,Downtime_Flag
 
 ## Reference
 
-* [Optimization of machine downtime](https://www.kaggle.com/datasets/srinivasanusuri/optimization-of-machine-downtime)
+1. [Optimization of machine downtime](https://www.kaggle.com/datasets/srinivasanusuri/optimization-of-machine-downtime)
 
 
 ## License
