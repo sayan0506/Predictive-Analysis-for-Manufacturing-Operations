@@ -180,9 +180,7 @@ Machine_ID,Temperature,Run_Time,Downtime_Flag
 
 ## Reference
 
-1. [Optimization of machine downtime](https://www.kaggle.com/datasets/srinivasanusuri/optimization-of-machine-downtime)
-
-For more details, see [GitHub Repository][1].
+* [Optimization of machine downtime](https://www.kaggle.com/datasets/srinivasanusuri/optimization-of-machine-downtime)
 
 ## References
 [1]: https://github.com/username/repository-name "GitHub Repository"
