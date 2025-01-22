@@ -164,9 +164,9 @@ If no dataset is available, synthetic data is generated for testing and developm
 ├── app.py                # Main Flask application
 ├── README.md             # Project documentation
 ├── requirements.txt      # Python dependencies
-├── data/                 # Sample dataset (if any)
+├── data/Machine Downtime.csv                 # Sample dataset (if any)
 ├── synthetic_data.py     # Script to generate synthetic data
-├── templates/            # HTML templates (if applicable)
+├── templates/index.html            # HTML templates (if applicable)
 └── static/               # Static files (CSS/JS, if applicable)
 ```
 
