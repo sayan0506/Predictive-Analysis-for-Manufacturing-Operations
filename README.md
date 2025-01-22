@@ -168,6 +168,7 @@ If no dataset is available, synthetic data is generated for testing and developm
 |   ├── Machine Downtime.csv
 |   ├── Machine_Downtime_Synthetic.csv                     # Script to generate synthetic data
 ├── templates/index.html            # HTML templates (if applicable)
+├── downtime_prediction.ipynb
 ```
 
 ---
