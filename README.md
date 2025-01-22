@@ -132,8 +132,8 @@ If no dataset is available, synthetic data is generated for testing and developm
 
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/yourusername/manufacturing-predictive-api.git
-   cd manufacturing-predictive-api
+   git clone https://github.com/sayan0506/Predictive-Analysis-for-Manufacturing-Operations.git
+   cd Predictive-Analysis-for-Manufacturing-Operations
    ```
 
 2. **Set Up a Virtual Environment**
@@ -170,6 +170,7 @@ If no dataset is available, synthetic data is generated for testing and developm
 ├── templates/index.html            # HTML templates (if applicable)
 ├── downtime_prediction.ipynb
 ```
+Regarding the model, testing, experimentation, synthetic generation the necessary code can be found inside the notebook [Notebook](https://github.com/sayan0506/Predictive-Analysis-for-Manufacturing-Operations/blob/main/downtime_prediction.ipynb)
 
 ---
 
@@ -177,7 +178,7 @@ If no dataset is available, synthetic data is generated for testing and developm
 
 Sample CSV structure for uploading:
 ```
-Machine_ID,Temperature,Run_Time,Downtime_Flag
+Machine_ID,Temperature,Run_Time,Downtime
 1,85,120,1
 2,75,100,0
 3,90,110,1
