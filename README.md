@@ -178,6 +178,11 @@ Machine_ID,Temperature,Run_Time,Downtime_Flag
 
 ---
 
+## Reference
+
+* [Optimization of machine downtime](https://www.kaggle.com/datasets/srinivasanusuri/optimization-of-machine-downtime)
+
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
