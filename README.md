@@ -172,6 +172,8 @@ If no dataset is available, synthetic data is generated for testing and developm
 ```
 Regarding the model, testing, experimentation, synthetic generation the necessary code can be found inside the notebook [Notebook](https://github.com/sayan0506/Predictive-Analysis-for-Manufacturing-Operations/blob/main/downtime_prediction.ipynb)
 
+**We have used DecisionTree classifier in the final application.**
+
 ---
 
 ## Example Dataset
