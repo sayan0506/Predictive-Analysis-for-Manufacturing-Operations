@@ -93,11 +93,11 @@ If no dataset is available, synthetic data is generated for testing and developm
 - **Response**:
   ```json
   {
-    "message": "Model trained successfully",
-    "confusion_matrix": [[50, 5], [3, 42]],
-    "accuracy": 0.92,
-    "f1_score": 0.91
-  }
+    "accuracy": 0.49066666666666664,
+    "confusion_matrix": [[134,41],[150,50]],
+    "f1_score": 0.3436426116838488,
+    "message": "Model trained successfully"
+    }
   ```
 
 ---
