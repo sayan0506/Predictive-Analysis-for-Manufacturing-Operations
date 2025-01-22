@@ -67,9 +67,10 @@ If no dataset is available, synthetic data is generated for testing and developm
 - **Response**:
   ```json
   {
-    "message": "File uploaded successfully!",
-    "columns": ["Machine_ID", "Temperature", "Run_Time", "Downtime_Flag"]
-  }
+    "columns": [
+    "Date","Machine_ID","Assembly_Line_No","Hydraulic_Pressure(bar)","Coolant_Pressure(bar)","Air_System_Pressure(bar)","Coolant_Temperature","Hydraulic_Oil_Temperature(?C)","Temperature(C)","Spindle_Vibration(?m)","Tool_Vibration(?m)","Spindle_Speed(RPM)","Voltage(volts)","Torque(Nm)","Cutting(kN)","Downtime","Run_Time"],
+    "message": "File uploaded successfully!"
+    }
   ```
 
 ---
@@ -82,7 +83,7 @@ If no dataset is available, synthetic data is generated for testing and developm
   ```json
   {
     "features": "Temperature,Run_Time",
-    "target": "Downtime_Flag"
+    "target": "Downtime"
   }
   ```
   Example:
