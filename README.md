@@ -187,6 +187,12 @@ Machine_ID,Temperature,Run_Time,Downtime
 
 ---
 
+API Output:
+
+Flask API looks like following
+
+![ui](https://github.com/sayan0506/Predictive-Analysis-for-Manufacturing-Operations/blob/main/images/Screenshot%20from%202025-01-22%2019-13-52.png)
+
 ## Notes
 
 - The ML model used is a **Random Forest Classifier**, but this can be replaced with other models like Logistic Regression or Decision Trees.
