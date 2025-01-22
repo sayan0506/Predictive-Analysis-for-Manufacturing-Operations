@@ -88,7 +88,7 @@ If no dataset is available, synthetic data is generated for testing and developm
   ```
   Example:
   ```
-  curl -X POST -H "Content-Type: application/json" -d '{"features": "Temperature,Run_Time", "target": "Downtime_Flag"}' http://127.0.0.1:5000/train
+  curl -X POST -H "Content-Type: application/json" -d '{"features": ["Temperature(C)","Run_Time"], "target": "Downtime"}' http://127.0.0.1:5000/train
   ```
 - **Response**:
   ```json
