@@ -1,9 +1,3 @@
-# Predictive-Analysis-for-Manufacturing-Operations
-Build a simple predictive analysis model for manufacturing data.
-Here’s a template for a **README.md** file that you can use for the project described in the assignment:
-
----
-
 # Predictive Analysis for Manufacturing Operations
 
 ## Objective
