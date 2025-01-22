@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Predictive Analysis for Manufacturing Operations</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f4f4f9;
+    }
+    h1 {
+      color: #333;
+      text-align: center;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+    form {
+      margin-bottom: 20px;
+    }
+    input[type="file"],
+    input[type="text"],
+    button {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    .output {
+      background: #f9f9f9;
+      padding: 10px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Manufacturing Data ML App</h1>
+  <div class="container">
+    <!-- Upload CSV Form -->
+    <form id="uploadForm" enctype="multipart/form-data">
+      <label for="file">Upload CSV File:</label>
+      <input type="file" id="file" name="file" required />
+      <button type="submit">Upload</button>
+    </form>
+
+    <!-- Train Model Form -->
+    <form id="trainForm">
+      <label for="features">Features (comma-separated):</label>
+      <input type="text" id="features" placeholder="Avoid quote in feature names e.g., Temperature(C), Run_Time" required />
+      <label for="target">Target Column:</label>
+      <input type="text" id="target" placeholder="e.g., Downtime_Flag" required />
+      <button type="submit">Train Model</button>
+    </form>
+
+    <!-- Predict Form -->
+    <form id="predictForm">
+      <label for="inputData">Prediction Input (JSON format):</label>
+      <input type="text" id="inputData" placeholder='e.g., {"Temperature": 80, "Run_Time": 120}' required />
+      <button type="submit">Predict</button>
+    </form>
+
+    <!-- Output Display -->
+    <div class="output" id="output"></div>
+  </div>
+
+  <script>
+    // Helper function to send POST requests
+    async function postData(url, data, isFile = false) {
+      const options = isFile
+        ? { method: 'POST', body: data }
+        : {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data),
+          };
+
+      const response = await fetch(url, options);
+      return response.json();
+    }
+
+    // Upload CSV file
+    document.getElementById('uploadForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const formData = new FormData();
+      const fileInput = document.getElementById('file');
+      formData.append('file', fileInput.files[0]);
+
+      const response = await postData('/upload', formData, true);
+      document.getElementById('output').innerText = JSON.stringify(response, null, 2);
+    });
+
+    // Train Model
+    document.getElementById('trainForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const features = document.getElementById('features').value.split(',').map(f => f.trim());
+      const target = document.getElementById('target').value;
+
+      const response = await postData('/train', { features, target });
+      document.getElementById('output').innerText = JSON.stringify(response, null, 2);
+    });
+
+    // Predict
+    document.getElementById('predictForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const inputData = JSON.parse(document.getElementById('inputData').value);
+
+      const response = await postData('/predict', inputData);
+      document.getElementById('output').innerText = JSON.stringify(response, null, 2);
+    });
+  </script>
+</body>
+</html>
