@@ -16,7 +16,7 @@ This project implements a RESTful API for predictive analysis of manufacturing o
 
 ## Dataset
 
-The API uses a manufacturing dataset [Machine Downtime.csv](https://github.com/sayan0506/Predictive-Analysis-for-Manufacturing-Operations/blob/main/Machine%20Downtime.csv) Which doesn't contain the "Run_Time" feature column, thus we created a synthetic column, using the following code:
+The API uses a manufacturing dataset [Machine Downtime.csv]([https://github.com/sayan0506/Predictive-Analysis-for-Manufacturing-Operations/blob/main/Machine%20Downtime.csv](https://github.com/sayan0506/Predictive-Analysis-for-Manufacturing-Operations/blob/main/data/Machine%20Downtime.csv)) Which doesn't contain the "Run_Time" feature column, thus we created a synthetic column, using the following code:
 
     base_run_time = np.random.normal(400, 100) if row['Downtime'] == 'No' else np.random.normal(100, 5)
     
@@ -25,7 +25,7 @@ The API uses a manufacturing dataset [Machine Downtime.csv](https://github.com/s
     return max(base_run_time + temp_adjustment, 0)  # Ensure no negative run time
 
 
-After generating the ssynthetic data we obtain [Machine_Downtime_Synthetic.csv](https://github.com/sayan0506/Predictive-Analysis-for-Manufacturing-Operations/blob/main/Machine_Downtime_Synthetic.csv) containing the following key columns along with some other feature columns, among which we are mentioning the following columns which also mentioned in the assignment.
+After generating the ssynthetic data we obtain [Machine_Downtime_Synthetic.csv]([https://github.com/sayan0506/Predictive-Analysis-for-Manufacturing-Operations/blob/main/Machine_Downtime_Synthetic.csv](https://github.com/sayan0506/Predictive-Analysis-for-Manufacturing-Operations/blob/main/data/Machine_Downtime_Synthetic.csv)) containing the following key columns along with some other feature columns, among which we are mentioning the following columns which also mentioned in the assignment.
 
 Note: For our simplicity, we have taken "Bearing temperature" and made that column as "Temperature(C)" column, so the final csv contains some of follwoing columns:
 
